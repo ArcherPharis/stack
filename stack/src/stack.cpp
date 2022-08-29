@@ -18,15 +18,6 @@ public:
 	stack() { topIndex = 0; }
 	~stack() { std::cout << "Deconstructor\n";}
 
-	//initializer list
-	stack(std::initializer_list<StackType> list)
-		:topIndex{ 0 }, theStack{ new StackType[maxSize] }
-	{
-		for (auto item : list)
-		{
-			add(item);
-		}
-	}
 
 	//copy con (deep copy)
 	stack(const stack& rhs)
